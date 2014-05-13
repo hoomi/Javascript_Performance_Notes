@@ -12,6 +12,7 @@ var sumUpTo = function sumUpTo(value) {
 }
 
 //Tried optimizing the first solution (failed)
+// It is slower than a normal for  loop because it has to check cachedValues[i] == undefined on every loop
 var optimizedSumUpTo =  (function() {
   var cachedValues = {0:0, 10:55, 100:5050, 200:20100, 300:45150, 1000:500500, 10000: 50005000, 100000:5000050000};
     return function optimizedSumUpTo(value) {
