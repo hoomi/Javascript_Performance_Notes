@@ -1,6 +1,6 @@
-var testUsingJuery =  function testUsingJuery() {
+var testUsingJquery =  function testUsingJquery() {
   var $testDiv = $("#testDiv");
-  for (var i = 2000; i--;) {
+  for (var i = 2000; i>=0; i--) {
     $testDiv.append("<p>This is a test line</p>");
   }
 }
@@ -9,7 +9,7 @@ var testUsingTemplates = function testUsingTemplates() {
   var $testDiv = $("#testDiv"),
     template = _.template($("script.template").html()),
     domElement = template();
-  for (var i = 2000; i--;) {
+  for (var i = 2000; i>=0; i--) {
     $testDiv.append(domElement);
   }
 }
@@ -17,7 +17,7 @@ var testUsingTemplates = function testUsingTemplates() {
 var testUsingJavascript = function testUsingJavascript() {
   var testDiv = document.getElementById('testDiv'),
     p;
-  for (var i = 2000; i--;) {
+  for (var i = 20000; i>=0; i--) {
     p = document.createElement('p');
     p.textContent = "This is a test line";
     testDiv.appendChild(p);
@@ -28,7 +28,7 @@ var testUsingDocumentFragment = function testUsingDocumentFragment() {
   var testDiv = document.getElementById('testDiv'),
     fragment = document.createDocumentFragment(),
     p;
-  for (var i = 2000; i--;) {
+  for (var i = 20000; i>=0 ;i--) {
     p = document.createElement('p');
     p.textContent = "This is a test line";
     fragment.appendChild(p);
@@ -37,6 +37,6 @@ var testUsingDocumentFragment = function testUsingDocumentFragment() {
 }
 
 var compareAppends = function() {
-  var a = [testUsingJuery, testUsingTemplates, testUsingJavascript, testUsingDocumentFragment];
+  var a = [testUsingJquery, testUsingTemplates, testUsingJavascript, testUsingDocumentFragment];
   compareFunctions(a,clearTestDiv);
 }

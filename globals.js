@@ -1,4 +1,5 @@
-var forlooplimits = 100000;
+var forlooplimits = 1000;
+var sumUpValue = 50000000;
 var generatedStringArray = (function() {
     var a = [];
     for (var i = 0; i <= forlooplimits; i++) {
@@ -7,35 +8,34 @@ var generatedStringArray = (function() {
   return a;
 })();
 
-// var generatedObjectArray = (function() {
-//     var a = [];
-//     for (var i = 0; i <= forlooplimits; i++) {
-//         a[i]={name:'Person ' + i, order:i, age:1,a:function(){},b:function(){}};
-//     }
-//   return a;
-// })();
-
-
-
 var clearTestDiv = function() {
-  $("#testDiv").empty();
+  $('#testDiv').empty();
 }
 
-var compareFunctions = function compareFunction(funcs,preparation) {
+var compareFunctions = function compareFunctions(funcs,preparation) {
   for(var i=funcs.length -1 ; i>=0; i--) {
-    if (preparation != undefined) {
-      preparation();
-    }
-    profileFunction(funcs[i]);
+    profileFunction(funcs[i],preparation);
   }
 }
 
-var profileFunction = function(func) {
+var profileFunction = function(func, preparation) {
+  if (preparation != undefined) {
+    preparation();
+  }
   console.debug('Started profiling');
-  console.timeline();
   console.profile(func.name);
-  func();
-  console.timelineEnd();
+  console.time(func.name);
+  console.log(func());
+  console.timeEnd(func.name);
   console.profileEnd();
   console.debug('Finished profiling');
+}
+
+
+var timelineFunction =  function(func) {
+  console.debug('Timeline started');
+  console.timeline();
+  func();
+  console.timelineEnd();
+  console.debug('Timeline ended');
 }

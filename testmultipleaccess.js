@@ -12,6 +12,6 @@ var testJqueryWithCaching =  function testJqueryWithCaching() {
 }
 
 var compareCaching = function() {
-  var a = [testMultipleJqueryAccess, testJqueryWithCaching,testUsingTemplates];
+  var a = [testMultipleJqueryAccess, testJqueryWithCaching];
   compareFunctions(a,clearTestDiv);
 }

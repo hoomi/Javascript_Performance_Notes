@@ -6,10 +6,9 @@ var normalForLoop = function normalForLoop() {
 }
 
 var normalForLoopWithVar = function normalForLoopWithVar() {
-  var length = generatedStringArray.length,
-    a;
+  var a;
 
-  for (var i = 0; i < length ; i++) {
+  for (var i = 0, length = generatedStringArray.length; i < length ; i++) {
       a = generatedStringArray[i];
   }
 }
@@ -17,13 +16,6 @@ var normalForLoopWithVar = function normalForLoopWithVar() {
 var reverseForLoop = function reverseForLoop() {
   var a;
   for (var i = generatedStringArray.length - 1; i >= 0 ; i--) {
-      a = generatedStringArray[i];
-  }
-}
-
-var shortForLoop = function shortForLoop() {
-  var a;
-  for (var i in generatedStringArray) {
       a = generatedStringArray[i];
   }
 }
