@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <h2>Compare for loop performances</h2>
+    <div>
+      <button onClick="return compareForLoops();">Compare for loops</button>
+    </div>
+    <h2>Compare hasOwnProperty</h2>
+    <div>
+      <button onClick="return compareHasOwnPropertyFuncs();">Compare hasOwnProperty</button>
+    </div>
+    <h2>Compare Concatinations</h2>
+    <div>
+      <button onClick="return compareConcatinationsFuncs();">Compare concatinations</button>
+    </div>
+    <h2>Compare Multiple Access with jQuery</h2>
+    <div>
+      <button onClick="return compareCaching();">Compare caching</button>
+    </div>
+    <h2>Compare Appending Children</h2>
+    <div>
+      <button onClick="return compareAppends();">Compare Appending Children</button>
+    </div>
+
+    <div id="testDiv">
+    </div>
+
+  </body>
+  <script type="text/template" class="template">
+    <p>This is a test line</p>
+  </script>
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="underscore-min.js"></script>
+  <script type="text/javascript" src="globals.js"></script>
+  <script type="text/javascript" src="testforloop.js"></script>
+  <script type="text/javascript" src="concatination.js"></script>
+  <script type="text/javascript" src="testhasownproperty.js"></script>
+  <script type="text/javascript" src="testmultipleaccess.js"></script>
+  <script type="text/javascript" src="testappending.js"></script>
+</html>
