@@ -18,6 +18,12 @@
     <div>
       <button onClick="return compareCaching();">Compare caching</button>
     </div>
+
+     <h2>Compare DOM Style change</h2>
+    <div>
+      <button onClick="return compareStyleFastAndSlow();">Compare</button>
+    </div>
+
     <h2>Compare Appending Children</h2>
     <div>
       <button onClick="return compareAppends();">Compare Appending Children</button>
@@ -39,6 +45,9 @@
       <button onClick="return profileFunction(factorialProgressiveCaching,undefined,factorialValue);">Progressive Caching</button>
     </div>
 
+    <div id="imageDiv">
+      <img src="http://thesupercarkids.com/wp-content/uploads/2014/05/22.jpg">
+    </div>
     <div id="testDiv">
     </div>
 
@@ -56,4 +65,5 @@
   <script type="text/javascript" src="javascripts/testappending.js"></script>
   <script type="text/javascript" src="javascripts/flamechartexample.js"></script>
   <script type="text/javascript" src="javascripts/factorial.js"></script>
+  <script type="text/javascript" src="javascripts/teststyle.js"></script>
 </html>

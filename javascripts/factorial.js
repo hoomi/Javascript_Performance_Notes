@@ -48,10 +48,10 @@ var factorialProgressiveCaching = (function () {
           multiple = multiple * a;
           break;
         }
-        multiple = multiple * i;
         if (i % 2 == 0) {
           cachedArray[i] = multiple;
         }
+        multiple = multiple * i;
       }
       for(var i in cachedArray) {
         cachedValues[i] = multiple / cachedArray[i];

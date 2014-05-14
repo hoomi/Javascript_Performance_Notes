@@ -1,4 +1,5 @@
-var forlooplimits = 1000;
+var forlooplimits = 1000000;
+var paragraphNumbers = 20000;
 var sumUpValue = 49000099;
 var factorialValue = 170;
 
