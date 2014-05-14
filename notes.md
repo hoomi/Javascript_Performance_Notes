@@ -34,5 +34,9 @@
 	<b>Aggregated self time</b> — Aggregate time for all invocations of the function across the recording, not including functions called by this function.
 
 	<b>Aggregated total time</b> — Aggregate total time for all invocations of the function, including functions called by this function.
+	
+Horizontal axis is the time axis. It shows  how  long each function call took in total. We try to make the wide blocks narrower.</br>
+Vertical axis is function call stack.</br>
+Try to minimize memory checks. It produces blank spaces in a function call which will result in longer execution time of that function.
 
 

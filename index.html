@@ -23,12 +23,20 @@
       <button onClick="return compareAppends();">Compare Appending Children</button>
     </div>
 
-    <h2>Flame Chart Example</h2>
+    <h2>Sum Example</h2>
     <div>
-      <button onClick="return profileFunction(sumUpTo);">Normal</button>
-      <button onClick="return profileFunction(optimizedSumUpTo);"> Optimized</button>
-      <button onClick="return profileFunction(adaptiveOptimizedSumUpTo);">Adaptive</button>
-      <button onClick="return profileFunction(easySolution);">Easy</button>
+      <button onClick="return profileFunction(sumUpTo,undefined,sumUpValue);">Normal</button>
+      <button onClick="return profileFunction(optimizedSumUpTo, undefined, sumUpValue);"> Optimized (Failed)</button>
+      <button onClick="return profileFunction(moreOptimizedSumUpTo, undefined, sumUpValue);"> More Optimized</button>
+      <button onClick="return profileFunction(adaptiveOptimizedSumUpTo, undefined, sumUpValue);">Adaptive</button>
+      <button onClick="return profileFunction(easySolution, undefined, sumUpValue);">Easy</button>
+    </div>
+
+     <h2>Factorial Example</h2>
+    <div>
+      <button onClick="return profileFunction(simpleFactorial,undefined,factorialValue);">Normal</button>
+      <button onClick="return profileFunction(factorialCaching,undefined,factorialValue);">Caching</button>
+      <button onClick="return profileFunction(factorialProgressiveCaching,undefined,factorialValue);">Progressive Caching</button>
     </div>
 
     <div id="testDiv">
@@ -47,4 +55,5 @@
   <script type="text/javascript" src="javascripts/testmultipleaccess.js"></script>
   <script type="text/javascript" src="javascripts/testappending.js"></script>
   <script type="text/javascript" src="javascripts/flamechartexample.js"></script>
+  <script type="text/javascript" src="javascripts/factorial.js"></script>
 </html>

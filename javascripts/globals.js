@@ -1,5 +1,7 @@
 var forlooplimits = 1000;
-var sumUpValue = 50000000;
+var sumUpValue = 49000099;
+var factorialValue = 170;
+
 var generatedStringArray = (function() {
     var a = [];
     for (var i = 0; i <= forlooplimits; i++) {
@@ -18,14 +20,14 @@ var compareFunctions = function compareFunctions(funcs,preparation) {
   }
 }
 
-var profileFunction = function(func, preparation) {
+var profileFunction = function(func, preparation, args) {
   if (preparation != undefined) {
     preparation();
   }
   console.debug('Started profiling');
   console.profile(func.name);
   console.time(func.name);
-  console.log(func());
+  console.log(func(args));
   console.timeEnd(func.name);
   console.profileEnd();
   console.debug('Finished profiling');
