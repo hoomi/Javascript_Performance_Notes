@@ -1,7 +1,7 @@
 var normalForLoop = function normalForLoop() {
   var a;
   for (var i = 0; i < generatedStringArray.length ; i++) {
-    a = generatedStringArray[i].toUpperCase();
+    a = generatedStringArray[i];
   }
 }
 

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/global.css">
+  </head>
 
   <body>
     <h2>Compare for loop performances</h2>
@@ -22,6 +25,11 @@
      <h2>Compare DOM Style change</h2>
     <div>
       <button onClick="return compareStyleFastAndSlow();">Compare</button>
+    </div>
+
+     <h2>Jquery Styling Comparison</h2>
+    <div>
+      <button onClick="return compareJqueryStyle();">Compare Jquery Styling</button>
     </div>
 
     <h2>Compare Appending Children</h2>
@@ -51,6 +59,11 @@
     <div id="testDiv">
     </div>
 
+    <div class="game">
+        <p class="inst">Type into the white box, the word:</p>
+        <button class="again" ><h3>Again</h3></button>
+    </div>
+
   </body>
   <script type="text/template" class="template">
     <p>This is a test line</p>
@@ -66,4 +79,5 @@
   <script type="text/javascript" src="javascripts/flamechartexample.js"></script>
   <script type="text/javascript" src="javascripts/factorial.js"></script>
   <script type="text/javascript" src="javascripts/teststyle.js"></script>
+  <script type="text/javascript" src="javascripts/addcss.js"></script>
 </html>

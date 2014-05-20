@@ -1,0 +1,17 @@
+.changedStyle
+{
+	background: black;
+}
+
+.changedStyle  > p 
+{
+	background: blue;
+	color: white;
+
+}
+
+.changedStyle > .again
+{
+	width: 300px;
+	height: 400px;
+}

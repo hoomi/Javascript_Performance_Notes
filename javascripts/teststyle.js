@@ -14,6 +14,17 @@ var addingCSSFast = function addingCSSFast() {
   myElement.style.cssText = 'border-left: 3px; border-right: 3px; border-top: 3px; border-bottom:3px; padding: 5px;background-color:black;';
 }
 
+var addCssJquery = function addCssJquery() {
+  var $myElement = $('#imageDiv');
+  $myElement.css('border-left','3px');
+  $myElement.css('border-right','3px');
+  $myElement.css('border-top','3px');
+  $myElement.css('border-bottom','3px');
+  $myElement.css('padding','5px');
+  $myElement.css('background-color','black');
+}
+
+
 var resetCSS = function resetCSS() {
    var myElement = document.getElementById('imageDiv');
   myElement.style.cssText = 'border-left: 0px; border-right: 0px; border-top: 0px; border-bottom:0px; padding: 5px;background-color:transparent;';
@@ -21,7 +32,7 @@ var resetCSS = function resetCSS() {
 
 
 var compareStyleFastAndSlow =  function compareStyleFastAndSlow() {
-  var a = [addingCSSSlow,addingCSSFast];
+  var a = [addingCSSSlow,addingCSSFast,addCssJquery];
   compareFunctions(a,resetCSS);
   resetCSS();
 }

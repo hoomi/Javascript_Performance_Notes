@@ -1,5 +1,5 @@
 var forlooplimits = 1000000;
-var paragraphNumbers = 20000;
+var paragraphNumbers = 10000;
 var sumUpValue = 49000099;
 var factorialValue = 170;
 
@@ -21,6 +21,12 @@ var compareFunctions = function compareFunctions(funcs,preparation) {
   }
 }
 
+var timeLineFunctions = function timeLineFunctions(funcs,preparation) {
+   for(var i=funcs.length -1 ; i>=0; i--) {
+    timelineFunction(funcs[i],preparation);
+  }
+}
+
 var profileFunction = function(func, preparation, args) {
   if (preparation != undefined) {
     preparation();
@@ -28,14 +34,17 @@ var profileFunction = function(func, preparation, args) {
   console.debug('Started profiling');
   console.profile(func.name);
   console.time(func.name);
-  console.log(func(args));
+  func(args);
   console.timeEnd(func.name);
   console.profileEnd();
   console.debug('Finished profiling');
 }
 
 
-var timelineFunction =  function(func) {
+var timelineFunction =  function(func, preparation, args) {
+  if (preparation != undefined) {
+    preparation();
+  }
   console.debug('Timeline started');
   console.timeline();
   func();
