@@ -24,15 +24,21 @@ var addCssJquery = function addCssJquery() {
   $myElement.css('background-color','black');
 }
 
+var addCssClass = function addCssClass() {
+  var $myElement = $('#imageDiv');
+  $myElement.addClass('testStylingClass');
+}
+
 
 var resetCSS = function resetCSS() {
    var myElement = document.getElementById('imageDiv');
   myElement.style.cssText = 'border-left: 0px; border-right: 0px; border-top: 0px; border-bottom:0px; padding: 5px;background-color:transparent;';
+  imageDiv.classList.remove('testStylingClass');
 }
 
 
 var compareStyleFastAndSlow =  function compareStyleFastAndSlow() {
-  var a = [addingCSSSlow,addingCSSFast,addCssJquery];
+  var a = [addingCSSSlow,addingCSSFast,addCssJquery,addCssClass];
   compareFunctions(a,resetCSS);
   resetCSS();
 }

@@ -7,7 +7,6 @@ var normalForLoop = function normalForLoop() {
 
 var normalForLoopWithVar = function normalForLoopWithVar() {
   var a;
-
   for (var i = 0, length = generatedStringArray.length; i < length ; i++) {
       a = generatedStringArray[i];
   }
@@ -34,8 +33,15 @@ var jQueryEachFunction = function jQueryEachFunction() {
   });
 }
 
+var modifiedForLoop = function modifiedForLoop() {
+  var a;
+  for (var i = 0, item; item = generatedStringArray[i++];) {
+      a=item;
+  }
+};
+
 var compareForLoops = function compareForLoops()
 {
-  var a = [normalForLoop,normalForLoopWithVar,reverseForLoop,shortForLoop,jQueryEachFunction];
+  var a = [normalForLoop,normalForLoopWithVar,reverseForLoop,shortForLoop,jQueryEachFunction,modifiedForLoop];
   compareFunctions(a);
 }
