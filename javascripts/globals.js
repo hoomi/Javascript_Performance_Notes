@@ -1,7 +1,7 @@
 var forlooplimits = 1000000;
 var paragraphNumbers = 1000;
 var sumUpValue = 49000099;
-var multipleValue = 10000000;
+var multipleValue = 1000000;
 var factorialValue = 170;
 
 var generatedStringArray = (function() {

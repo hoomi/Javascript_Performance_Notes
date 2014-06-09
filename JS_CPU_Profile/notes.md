@@ -1,5 +1,5 @@
-[profiles]:images/Chrome_Profiles.png "Chrome Profiles"
-[flamechart]:images/Flame_Chart.png "Flame Chart"
+[profiles]:../images/Chrome_Profiles.png "Chrome Profiles"
+[flamechart]:../images/Flame_Chart.png "Flame Chart"
 #Chrome Tools
 
 ## Profiling
